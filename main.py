@@ -48,10 +48,10 @@ if __name__ == '__main__':
     compare_address2 = sys.argv[2]
     output_address = sys.argv[3]
     # 打开包含两篇文章的文件, 并将其内容比较相似度
-    with open(compare_address1, 'r') as text1, open(compare_address2, 'r') as text2:
+    with open(compare_address1, 'r', encoding='utf-8') as text1, open(compare_address2, 'r', encoding='utf-8') as text2:
         content1 = text1.read()
         content2 = text2.read()
         similarity = calc_of_similarity(content1, content2)
         # 将计算得出的相似度写入到指定文件中
-        with open(output_address, 'w') as output_file:
+        with open(output_address, 'w', encoding='utf-8') as output_file:
             output_file.write('两篇文章的相似度: %.2f%%' % (similarity * 100))
