@@ -60,7 +60,6 @@ if __name__ == '__main__':
         status = True
     # 未产生异常才继续计算两篇文章的相似度
     if not status:
-        print("还在运行")
         similarity = calc_of_similarity(content1, content2)
         # 将计算得出的相似度写入到指定文件中
         with open(output_address, 'w', encoding='utf-8') as output_file:
